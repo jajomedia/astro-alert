@@ -1,0 +1,29 @@
+---
+
+
+
+
+export interface Props {
+    title: string;
+    url: string;
+    link: string;
+    datos: string;
+    casos: string;
+    obs: string;
+
+}
+
+const { title, url, link, datos, casos, obs } = Astro.props;
+---
+<div class="box">
+    <h1>{title}</h1>
+    <a href={url}>{link}</a>
+    <code>{datos}</code>
+    <p>{casos}</p>
+    <p>{obs}</p>
+</div>
+
+
+<style>
+    .box{padding: 20px; border: 1px solid #ccc; border-radius: 22px; margin-bottom: 20px;}
+</style>
